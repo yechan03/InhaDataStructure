@@ -124,12 +124,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameEntry.cpp" />
-    <ClCompile Include="GAMEENTRY.h" />
-    <ClCompile Include="TestDriver.cpp" />
+    <ClCompile Include="GameEntry.h" />
+    <ClCompile Include="TestDriver_EX1.cpp" />
     <ClCompile Include="Scores.cpp" />
+    <ClCompile Include="TestDriver_EX2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SCORES.h" />
+    <ClInclude Include="Scores.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

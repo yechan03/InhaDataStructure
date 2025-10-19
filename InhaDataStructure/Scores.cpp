@@ -2,8 +2,10 @@
 
 using namespace std;
 
-#include "SCORES.h"
-#include "GAMEENTRY.h"
+#include "Scores.h"
+#include "GameEntry.h"
+
+
 
 //Constructor
 Scores::Scores(int maxEnt) {
@@ -40,7 +42,7 @@ void Scores::add(const GameEntry& e) {
 	}
 	int i = numEntries - 2;
 	while (i >= 0 && newScore > entries[i].getScore()) {
-		entries[i + 1];
+		entries[i + 1] = entries[i];
 		i--;
 	}
 	entries[i + 1] = e;
@@ -50,10 +52,31 @@ GameEntry Scores::remove(int i) {
 		cout << "invalid Index";
 		return entries[numEntries - 1];
 	}
-	else {
-		delete[i] entries;
+	GameEntry removed = entries[i];
+	//¿ŞÂÊÀ¸·Î Shifting
+	for (int j = i; j < numEntries-1; j++){
+		entries[j] = entries[j + 1];
 	}
+	numEntries--;
+	return removed;
 }
+//Refactoring Start: Name approach remove
+GameEntry Scores::remove(const string& n) {
+	for (int i = 0; i < numEntries; i++){
+		if (entries[i].getName() == n){
+			GameEntry removed = entries[i];
+			for (int j = i; j < numEntries-1; j++)
+			{
+				entries[j] = entries[j + 1];
+			}
+			--numEntries;
+			return removed;
+		}
+	}
+
+}
+//Refactoring End
+
 Scores& Scores::operator=( const Scores & rs ) {
 	if (this !=&rs){
 		delete[] entries;
@@ -67,17 +90,15 @@ Scores& Scores::operator=( const Scores & rs ) {
 	return *this;
 }
 
-void Scores::printAll() {
-	for (int i = 0; i < numEntries; i++){
-		cout << i + 1 << ", " << entries[i].getName() << ", " << entries[i].getScore() << endl;
-	}
-}
 
+// operator Overloding
 ostream& operator << (ostream & out, const Scores& sc) {
 	for (int i = 0; i < sc.maxEntries; i++){
-		out << sc.entries[i].getName() << " ";
-		out << sc.entries[i].getScore();
-		out << endl;
+		if (sc.entries[i].getScore() == 0) {
+			continue;
+		}
+		out << sc.entries[i].getName() << " " << sc.entries[i].getScore() << endl;
+
 	}
 	return out;
 }

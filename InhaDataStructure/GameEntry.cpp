@@ -1,15 +1,24 @@
 #include <string.h>
 
-#include "GAMEENTRY.h"
+#include "GameEntry.h"
 
 using namespace std;
 
 //Constructor setting name and score
-GameEntry::GameEntry(const string& n, int s) : name(n) { // nmae <- pass by reference
+GameEntry::GameEntry(const string& n, int s) : name(n) { // name <- pass by reference
+
 	setScore(s); 
 
 }
 
+
+//Refactoring Start
+//GameEntry::GameEntry(const string &n, int s) {
+//	name = n;
+//	score = s;
+//}
+
+// Refactoring END
 //NameGetter
 string GameEntry::getName() const {
 	return name;

@@ -22,24 +22,33 @@
     <Filter Include="소스 파일\DataStructureEx1\ImplementionClass">
       <UniqueIdentifier>{66538fd3-6227-4239-9fb7-a9e6613231c7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\DataStructureEx2">
+      <UniqueIdentifier>{c975f23b-e34c-4373-8044-47d851d8a701}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureEx2\ImplementionClass">
+      <UniqueIdentifier>{9826f90a-2d43-4393-bbf3-0c486f4fc31a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GAMEENTRY.h">
-      <Filter>소스 파일\DataStructureEx1\Header</Filter>
-    </ClCompile>
     <ClCompile Include="GameEntry.cpp">
       <Filter>소스 파일\DataStructureEx1\ImplementionClass</Filter>
     </ClCompile>
     <ClCompile Include="Scores.cpp">
       <Filter>소스 파일\DataStructureEx1\ImplementionClass</Filter>
     </ClCompile>
-    <ClCompile Include="TestDriver.cpp">
+    <ClCompile Include="TestDriver_EX1.cpp">
       <Filter>소스 파일\DataStructureEx1</Filter>
+    </ClCompile>
+    <ClCompile Include="TestDriver_EX2.cpp">
+      <Filter>소스 파일\DataStructureEx2</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEntry.h">
+      <Filter>헤더 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SCORES.h">
-      <Filter>소스 파일\DataStructureEx1\Header</Filter>
+    <ClInclude Include="Scores.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

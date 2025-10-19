@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-#include "GAMEENTRY.h"
+#include "GameEntry.h"
 
 using namespace std;
 using std::operator<<;
@@ -20,9 +20,9 @@ public:
 	Scores(const Scores& is); // Copy Constructor 
 	~Scores();
 	GameEntry remove(int i); // i index remove
+	GameEntry remove(const string& n); // Name approach remove
 	Scores& operator = (const Scores& is);
 	void add(const GameEntry& e);
-	void printAll();
 	friend ostream& operator <<(ostream& out, const Scores& sc);
 };
 
