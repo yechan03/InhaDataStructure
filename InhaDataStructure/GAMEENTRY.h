@@ -9,10 +9,11 @@ class GameEntry {
 private:
 	string name;
 	int score;
+
 public:
 	GameEntry(const string& n = "", int s = 0); 
 	string getName() const;
-	// setName으로 이름수정해보자
+	void setName(string s);
 	void setScore(int s);
 	int getScore() const;
 };

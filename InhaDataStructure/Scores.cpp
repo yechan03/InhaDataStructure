@@ -52,6 +52,7 @@ GameEntry Scores::remove(int i) {
 		cout << "invalid Index";
 		return entries[numEntries - 1];
 	}
+	
 	GameEntry removed = entries[i];
 	//¿ÞÂÊÀ¸·Î Shifting
 	for (int j = i; j < numEntries-1; j++){
@@ -60,6 +61,7 @@ GameEntry Scores::remove(int i) {
 	numEntries--;
 	return removed;
 }
+
 //Refactoring Start: Name approach remove
 GameEntry Scores::remove(const string& n) {
 	for (int i = 0; i < numEntries; i++){
@@ -77,6 +79,18 @@ GameEntry Scores::remove(const string& n) {
 }
 //Refactoring End
 
+//Refactoring UserSetName
+void Scores::setUserName(int i, const string& s) {
+	entries[i].setName(s);
+}
+
+void Scores::setUserScore(int i, int s) {
+	entries[i].setScore(s);
+}
+
+
+
+// operator Overloding
 Scores& Scores::operator=( const Scores & rs ) {
 	if (this !=&rs){
 		delete[] entries;
@@ -90,14 +104,12 @@ Scores& Scores::operator=( const Scores & rs ) {
 	return *this;
 }
 
-
-// operator Overloding
 ostream& operator << (ostream & out, const Scores& sc) {
-	for (int i = 0; i < sc.maxEntries; i++){
+	for (int i = 0; i < sc.numEntries; i++){
 		if (sc.entries[i].getScore() == 0) {
 			continue;
 		}
-		out << sc.entries[i].getName() << " " << sc.entries[i].getScore() << endl;
+		out << i+1 << " " << sc.entries[i].getName() << " " << sc.entries[i].getScore() << endl;
 
 	}
 	return out;

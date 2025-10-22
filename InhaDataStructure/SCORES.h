@@ -20,7 +20,11 @@ public:
 	Scores(const Scores& is); // Copy Constructor 
 	~Scores();
 	GameEntry remove(int i); // i index remove
+	//Refactoring Part
 	GameEntry remove(const string& n); // Name approach remove
+	void setUserName(int i, const string& s);
+	void setUserScore(int i, int s);
+	//Refactoring Part End
 	Scores& operator = (const Scores& is);
 	void add(const GameEntry& e);
 	friend ostream& operator <<(ostream& out, const Scores& sc);
