@@ -20,13 +20,13 @@ int main() {
 	string userName = "";
 	string changeUserName = "";
 	string addingUserCheck = "";
-
+	
 	GameEntry item(userName, userScore);
-
-	cout << "Choose Maximum User(※unable resizing): ";
+	
+	cout << "Choose MaximumNum: ";
 	cin >> maximumUserNum;
 	Scores  newList(maximumUserNum); // GameEntry Data Type Array 생성 
-
+	
 	for (int i = 0; i < maximumUserNum; i++){
 		cout << "User Name: ";
 		cin >> userName;
@@ -43,14 +43,14 @@ int main() {
 			}
 		}
 	}
-
-	cout << "===Printing Score board==="<< endl << newList;
-
+	
+	cout << "===Printing Score board==="<< endl << newList << endl;
+	
 	while (1) {
-		cout << "Choose Function:" << endl <<
-			"1. remove User, 2. add User 3. Change User Name, 4. Change User Score, Default. break : ";
+		cout << endl << "Choose Function:" << endl <<
+			"1. remove User, 2. add User 3. Change User Name, 4. Change User Score, 5. Resizing Max Default. break : ";
 		cin >> functionChoice;
-
+	
 		if (functionChoice == 1) { // 제거하고 싶은 index를 받아 remove해주는 기능이다.
 			int removeUserIndex;
 			cout << "Choose remove user index: ";
@@ -68,7 +68,7 @@ int main() {
 			item.setScore(userScore);
 			newList.add(item);
 			cout << endl << "===After add item===" << endl << newList;
-
+	
 		}
 		else if (functionChoice == 3) { // 원하는 index번호를 받아 User의 이름을 바꾸어 주었다. 
 			cout << "Select User index; ";
@@ -86,13 +86,18 @@ int main() {
 			newList.setUserScore(userIndex - 1, changeUserScore);
 			cout << endl << "===After changed user Score=== " << endl << newList;
 		}
+		else if (functionChoice == 5) { //상위n번째 Resizing
+			cout << "want Resizing Array Max index?: ";
+			cin >> maximumUserNum;
+			newList.resize(maximumUserNum);
+		}
 		else {
 			break;
 		}
 	}
 	cout << "===After Changed Scored Board===" << endl << newList;
 	
-
+	
 	return 0;
 	
 
@@ -122,4 +127,5 @@ int main() {
 	//cout << "After delete 4th(Paul's) score" << endl << newList;
 	//GameEntry deletedItem2 = newList.remove("Mike");
 	//cout << "After delete Mike(1'th) score" << endl << newList;
+	//return 0;
 }
