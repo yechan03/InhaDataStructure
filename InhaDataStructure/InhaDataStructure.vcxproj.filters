@@ -22,11 +22,23 @@
     <Filter Include="소스 파일\DataStructureEx1\ImplementionClass">
       <UniqueIdentifier>{66538fd3-6227-4239-9fb7-a9e6613231c7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\DataStructureEx2">
+    <Filter Include="소스 파일\DataStructureSLL">
       <UniqueIdentifier>{c975f23b-e34c-4373-8044-47d851d8a701}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\DataStructureEx2\ImplementionClass">
+    <Filter Include="소스 파일\DataStructureSLL\ImplementionClass">
       <UniqueIdentifier>{9826f90a-2d43-4393-bbf3-0c486f4fc31a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureSLL\Header">
+      <UniqueIdentifier>{369da22d-56e1-475a-b326-1a6bc23ed092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureDLL">
+      <UniqueIdentifier>{efdd7e16-114a-4dfb-be81-34f76016bb91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureDLL\Header">
+      <UniqueIdentifier>{aceb43b9-9943-4676-9536-e571dc1eda3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureDLL\ImplementionClass">
+      <UniqueIdentifier>{44207f77-25c2-42f0-933b-bfee2ca72ecf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -40,15 +52,36 @@
       <Filter>소스 파일\DataStructureEx1</Filter>
     </ClCompile>
     <ClCompile Include="TestDriver_EX2.cpp">
-      <Filter>소스 파일\DataStructureEx2</Filter>
+      <Filter>소스 파일\DataStructureSLL</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleLL.cpp">
+      <Filter>소스 파일\DataStructureSLL\ImplementionClass</Filter>
     </ClCompile>
     <ClCompile Include="GameEntry.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\DataStructureEx1\Header</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLTestDriver.cpp">
+      <Filter>소스 파일\DataStructureDLL</Filter>
+    </ClCompile>
+    <ClCompile Include="DLinkedList.cpp">
+      <Filter>소스 파일\DataStructureDLL\ImplementionClass</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SNode.h">
+      <Filter>소스 파일\DataStructureSLL\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleLL.h">
+      <Filter>소스 파일\DataStructureSLL\Header</Filter>
+    </ClInclude>
     <ClInclude Include="Scores.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\DataStructureEx1\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DNodeEx.h">
+      <Filter>소스 파일\DataStructureDLL\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DLinkedList.h">
+      <Filter>소스 파일\DataStructureDLL\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
