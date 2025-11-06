@@ -12,7 +12,7 @@ SingleLL::~SingleLL() {
 	while (!empty()) removeFront();
 }
 bool SingleLL::empty() const {
-	return (head != NULL);
+	return (head == NULL);
 }
 int SingleLL::size() const {
 	return count;
@@ -27,7 +27,7 @@ void SingleLL::addFront(int e) {
 	SNode* v = new SNode;
 	v->elem = e;
 	v->next = head;
-	if (head!=NULL)
+	if (head==NULL)
 	{
 		tail = v;
 	}
@@ -35,5 +35,13 @@ void SingleLL::addFront(int e) {
 	count++;
 }
 void SingleLL::removeFront() {
-
+	if (empty())
+	{
+		return;
+	}
+	SNode* v = head;
+	head = v->next;
+	delete v;
+	count--;
+	if (head == NULL) tail = NULL;
 }

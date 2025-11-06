@@ -40,6 +40,15 @@
     <Filter Include="소스 파일\DataStructureDLL\ImplementionClass">
       <UniqueIdentifier>{44207f77-25c2-42f0-933b-bfee2ca72ecf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\DataStructureSLLStack">
+      <UniqueIdentifier>{1c22a043-e0db-4b2c-b587-85b22112beca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureSLLStack\Header">
+      <UniqueIdentifier>{362b0dea-24f2-4d10-bc40-e91bd3644095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureSLLStack\ImplementionClass">
+      <UniqueIdentifier>{824dd1ad-48c0-4303-9d65-3c8092b30824}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameEntry.cpp">
@@ -66,6 +75,12 @@
     <ClCompile Include="DLinkedList.cpp">
       <Filter>소스 파일\DataStructureDLL\ImplementionClass</Filter>
     </ClCompile>
+    <ClCompile Include="SLLStackDriver.cpp">
+      <Filter>소스 파일\DataStructureSLLStack</Filter>
+    </ClCompile>
+    <ClCompile Include="SLLStack.cpp">
+      <Filter>소스 파일\DataStructureSLLStack\ImplementionClass</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SNode.h">
@@ -82,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="DLinkedList.h">
       <Filter>소스 파일\DataStructureDLL\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="SLLStack.h">
+      <Filter>소스 파일\DataStructureSLLStack\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
