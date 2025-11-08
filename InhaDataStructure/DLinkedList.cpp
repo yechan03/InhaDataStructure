@@ -1,7 +1,8 @@
 #include <string>
-
+#include <stdexcept>
 #include "DLinkedList.h"
 
+using std::underflow_error;
 
 DLinkedList::DLinkedList() {
 	header = new DNodeEx();
@@ -26,9 +27,11 @@ bool DLinkedList::empty() const {
 }
 
 int DLinkedList::front() const {
+	if (empty()) throw underflow_error("Deque is empty"); //empty 예외처리
 	return header->next->element; // 더미 header의 다음부분의 element 반환
 }
 int DLinkedList::back() const {
+	if (empty()) throw underflow_error("Deque is empty");
 	return trailer->prev->element; // 더미 trailer의 전부분의 element를 반환
 
 }
@@ -47,7 +50,7 @@ void DLinkedList::addFront(int e) {
 }
 
 void DLinkedList::addBack(int e) {
-	add(trailer->prev, e);
+	add(trailer, e);
 }
 void DLinkedList::remove(DNodeEx* v) {
 	DNodeEx* u = v->prev;

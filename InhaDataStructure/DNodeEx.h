@@ -1,7 +1,6 @@
 #ifndef DNODEEX
 #define DNODEEX
 
-#include "DLinkedList.h"
 
 class DNodeEx {
 private:
@@ -9,7 +8,7 @@ private:
 	DNodeEx* next;
 	DNodeEx* prev;
 public:
-	friend DLinkedList;
+	friend  class DLinkedList;
 	
 };
 

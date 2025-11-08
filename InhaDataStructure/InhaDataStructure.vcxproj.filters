@@ -49,6 +49,15 @@
     <Filter Include="소스 파일\DataStructureSLLStack\ImplementionClass">
       <UniqueIdentifier>{824dd1ad-48c0-4303-9d65-3c8092b30824}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\DataStructureDeque">
+      <UniqueIdentifier>{b070ba25-9d6a-4e29-b893-7feecd4b999a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureDeque\Header">
+      <UniqueIdentifier>{17b9882e-c781-4064-9965-b5c85ec92cbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureDeque\ImplementionClass">
+      <UniqueIdentifier>{c15ca583-e6fc-4205-872d-acdda1357031}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameEntry.cpp">
@@ -81,6 +90,12 @@
     <ClCompile Include="SLLStack.cpp">
       <Filter>소스 파일\DataStructureSLLStack\ImplementionClass</Filter>
     </ClCompile>
+    <ClCompile Include="DLLDeque.cpp">
+      <Filter>소스 파일\DataStructureDeque\ImplementionClass</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLDequeDriver.cpp">
+      <Filter>소스 파일\DataStructureDeque</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SNode.h">
@@ -100,6 +115,9 @@
     </ClInclude>
     <ClInclude Include="SLLStack.h">
       <Filter>소스 파일\DataStructureSLLStack\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DLLDeque.h">
+      <Filter>소스 파일\DataStructureDeque\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

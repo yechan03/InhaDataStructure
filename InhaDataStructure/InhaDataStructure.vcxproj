@@ -124,8 +124,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DLinkedList.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">아니오</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="DLLDeque.cpp" />
+    <ClCompile Include="DLLDequeDriver.cpp" />
     <ClCompile Include="DLLTestDriver.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -134,10 +136,14 @@
     </ClCompile>
     <ClCompile Include="GameEntry.h" />
     <ClCompile Include="SingleLL.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">아니오</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="SLLStack.cpp" />
-    <ClCompile Include="SLLStackDriver.cpp" />
+    <ClCompile Include="SLLStack.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SLLStackDriver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="TestDriver_EX1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -150,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DLinkedList.h" />
+    <ClInclude Include="DLLDeque.h" />
     <ClInclude Include="DNodeEx.h" />
     <ClInclude Include="Scores.h" />
     <ClInclude Include="SingleLL.h" />

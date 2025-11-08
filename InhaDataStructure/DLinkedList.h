@@ -1,6 +1,8 @@
 #ifndef DLINKEDLIST
 #define DLINKEDLIST
 
+#include <stdexcept>
+
 #include "DNodeEX.h"
 
 class DLinkedList {
@@ -13,12 +15,16 @@ private:
 public:
 	DLinkedList();
 	~DLinkedList();
+
 	int size() const;
 	bool empty() const;
+
 	int front() const;
 	int back() const;
+
 	void addFront(int e);
 	void addBack(int e);
+
 	void removeFront();
 	void removeBack();
 
