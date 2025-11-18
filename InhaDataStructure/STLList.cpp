@@ -56,8 +56,9 @@ void STLList::eraseByKey(int key) {
 	DNodeEx* target = linearSearch(*this, key);
 	erase(target);
 }
-int STLList::indexOf(STLList& ns, DNodeEx* target) {
+int STLList::indexOf(STLList& ns, int key) {
 	int indexCounter = 0;
+	DNodeEx* target = linearSearch(ns, key);
 	for (DNodeEx* p = ns.beginPos(); p != ns.endPos(); p = p->getNext()) {
 		if (p == target)
 			return indexCounter;
@@ -75,7 +76,7 @@ DNodeEx* STLList::endPos() const {
 }
 
 DNodeEx* STLList::linearSearch(STLList& ns, int key) {
-	int indexCounter = 0;
+
 	for (DNodeEx* p = ns.beginPos(); p != ns.endPos(); p = p->next) {
 		if (p->getElement() == key) {
 			return p;

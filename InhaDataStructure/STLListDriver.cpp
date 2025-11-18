@@ -43,7 +43,7 @@ int main() {
 	{
 		ns.insertBack(a[i]);
 	}
-	cout << endl << "Add function(insert, Erase)" << endl;
+	cout << endl << "Add function(insert, Erase, indexOf)" << endl;
 	cout << "---------print List-----------" << endl;
 	ns.printList();
 	ns.insertByKey(5, 8);
@@ -52,6 +52,8 @@ int main() {
 	ns.eraseByKey(8);
 	cout << "erase By key(linear search) key: 8" << endl;
 	ns.printList();
+	cout << "indexOf By key(linear search) " << endl;
+	cout << "index of key:5 index:" << ns.indexOf(ns, 5)+1;
 
 	return 0;
 }

@@ -10,11 +10,10 @@ public:
 	
 	void insert(DNodeEx* p, int e);
 	void erase(DNodeEx* p);
+	int indexOf(STLList& ns, int key);
 
 	void insertByKey(int key, int e);
 	void eraseByKey(int key);
-	int indexOf(STLList& ns, DNodeEx* target);
-
 	void printList();
 
 	DNodeEx* beginPos()const;
