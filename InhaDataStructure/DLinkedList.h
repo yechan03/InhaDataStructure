@@ -28,7 +28,8 @@ public:
 	void removeFront();
 	void removeBack();
 
+	DNodeEx* getFirstNode() const { return header->next; };
+	DNodeEx* getTrailerNode() const { return trailer; };
+
 };
-
-
 #endif //!DLinkedList

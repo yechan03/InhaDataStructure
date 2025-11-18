@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "SLLStack.h"
 
 using namespace std;

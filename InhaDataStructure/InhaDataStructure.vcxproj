@@ -123,11 +123,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DLLDequeDriver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DLLDeque.cpp" />
     <ClCompile Include="DLinkedList.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">아니오</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="DLLDeque.cpp" />
-    <ClCompile Include="DLLDequeDriver.cpp" />
+    <ClCompile Include="DLLStack.cpp" />
     <ClCompile Include="DLLTestDriver.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -144,6 +147,8 @@
     <ClCompile Include="SLLStackDriver.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="STLList.cpp" />
+    <ClCompile Include="STLListDriver.cpp" />
     <ClCompile Include="TestDriver_EX1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -157,11 +162,13 @@
   <ItemGroup>
     <ClInclude Include="DLinkedList.h" />
     <ClInclude Include="DLLDeque.h" />
+    <ClInclude Include="DLLStack.h" />
     <ClInclude Include="DNodeEx.h" />
     <ClInclude Include="Scores.h" />
     <ClInclude Include="SingleLL.h" />
     <ClInclude Include="SLLStack.h" />
     <ClInclude Include="SNode.h" />
+    <ClInclude Include="STLList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

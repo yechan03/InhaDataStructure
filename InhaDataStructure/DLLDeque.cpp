@@ -6,6 +6,8 @@
 using std::overflow_error;
 using std::underflow_error;
 
+DLLDeque::DLLDeque():count(0), capacity(100) {};
+
 DLLDeque::DLLDeque(int cap) :count(0), capacity(cap) {};
 
 DLLDeque::~DLLDeque() {};
@@ -48,4 +50,8 @@ int DLLDeque::front() const {
 
 int DLLDeque::back() const {
 	return list.back();
+}
+
+int DLLDeque::size() const {
+	return count;
 }

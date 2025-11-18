@@ -3,14 +3,16 @@
 
 #include "DLinkedList.h"
 
-class DLLDeque {
+class DLLDeque : public DLinkedList{
 private:
 	DLinkedList list;
 	int count;
 	int capacity;
 public:
 	DLLDeque(int cap);
+	DLLDeque();
 	~DLLDeque();
+
 
 	bool empty() const;
 	bool full() const;
@@ -23,6 +25,9 @@ public:
 
 	int front() const;
 	int back() const;
+
+	int size() const;
+
 };
 
 #endif //DLLDEQUE

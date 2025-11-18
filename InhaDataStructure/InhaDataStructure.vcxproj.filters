@@ -49,14 +49,23 @@
     <Filter Include="소스 파일\DataStructureSLLStack\ImplementionClass">
       <UniqueIdentifier>{824dd1ad-48c0-4303-9d65-3c8092b30824}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\DataStructureDeque">
+    <Filter Include="소스 파일\DataStructureDequeStack">
       <UniqueIdentifier>{b070ba25-9d6a-4e29-b893-7feecd4b999a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\DataStructureDeque\Header">
+    <Filter Include="소스 파일\DataStructureDequeStack\Header">
       <UniqueIdentifier>{17b9882e-c781-4064-9965-b5c85ec92cbd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\DataStructureDeque\ImplementionClass">
+    <Filter Include="소스 파일\DataStructureDequeStack\ImplementionClass">
       <UniqueIdentifier>{c15ca583-e6fc-4205-872d-acdda1357031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureSTLList">
+      <UniqueIdentifier>{893a9a5b-8321-4df2-aac1-89782f5a84d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureSTLList\header">
+      <UniqueIdentifier>{6e266c18-a37b-4f96-ac23-9184086a8784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureSTLList\ImplementionClass">
+      <UniqueIdentifier>{294edf52-bf55-423e-bfaa-9741a44da35f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -87,14 +96,23 @@
     <ClCompile Include="SLLStackDriver.cpp">
       <Filter>소스 파일\DataStructureSLLStack</Filter>
     </ClCompile>
+    <ClCompile Include="DLLStack.cpp">
+      <Filter>소스 파일\DataStructureDequeStack\ImplementionClass</Filter>
+    </ClCompile>
     <ClCompile Include="SLLStack.cpp">
-      <Filter>소스 파일\DataStructureSLLStack\ImplementionClass</Filter>
+      <Filter>소스 파일\DataStructureSLLStack\Header</Filter>
     </ClCompile>
     <ClCompile Include="DLLDeque.cpp">
-      <Filter>소스 파일\DataStructureDeque\ImplementionClass</Filter>
+      <Filter>소스 파일\DataStructureDequeStack\ImplementionClass</Filter>
     </ClCompile>
     <ClCompile Include="DLLDequeDriver.cpp">
-      <Filter>소스 파일\DataStructureDeque</Filter>
+      <Filter>소스 파일\DataStructureDequeStack</Filter>
+    </ClCompile>
+    <ClCompile Include="STLList.cpp">
+      <Filter>소스 파일\DataStructureSTLList\ImplementionClass</Filter>
+    </ClCompile>
+    <ClCompile Include="STLListDriver.cpp">
+      <Filter>소스 파일\DataStructureSTLList</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -116,8 +134,14 @@
     <ClInclude Include="SLLStack.h">
       <Filter>소스 파일\DataStructureSLLStack\Header</Filter>
     </ClInclude>
+    <ClInclude Include="DLLStack.h">
+      <Filter>소스 파일\DataStructureDequeStack\Header</Filter>
+    </ClInclude>
     <ClInclude Include="DLLDeque.h">
-      <Filter>소스 파일\DataStructureDeque\Header</Filter>
+      <Filter>소스 파일\DataStructureDequeStack\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="STLList.h">
+      <Filter>소스 파일\DataStructureSTLList\header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

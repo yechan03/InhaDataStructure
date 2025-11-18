@@ -1,12 +1,14 @@
 #include <string>
+
 #include <stdexcept>
 #include "DLinkedList.h"
+
 
 using std::underflow_error;
 
 DLinkedList::DLinkedList() {
 	header = new DNodeEx();
-	trailer = new DNodeEx();
+	trailer = new DNodeEx(); 
 	header->next = trailer;
 	trailer->prev = header;
 	count = 0;
