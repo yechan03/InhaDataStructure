@@ -10,7 +10,9 @@ void STLList::insertBack(int e) {
 void STLList::eraseFront() {
 	removeFront();
 }
-
+void STLList::insert(int i, int e) {
+	
+}
 void STLList::insert(DNodeEx* p, int e) {
 	if (p==NULL){
 		return;
@@ -26,8 +28,7 @@ void STLList::insert(DNodeEx* p, int e) {
 }
 
 void STLList::erase(DNodeEx* p) {
-	if (p==NULL)
-	{
+	if (p==NULL){
 		return;
 	}
 	DNodeEx* prevNode = p->getPrev();
@@ -56,16 +57,6 @@ void STLList::eraseByKey(int key) {
 	DNodeEx* target = linearSearch(*this, key);
 	erase(target);
 }
-int STLList::indexOf(STLList& ns, int key) {
-	int indexCounter = 0;
-	DNodeEx* target = linearSearch(ns, key);
-	for (DNodeEx* p = ns.beginPos(); p != ns.endPos(); p = p->getNext()) {
-		if (p == target)
-			return indexCounter;
-		indexCounter++;
-	}
-	return -1;
-}
 
 DNodeEx* STLList::beginPos() const {
 	return getFirstNode();
@@ -75,13 +66,5 @@ DNodeEx* STLList::endPos() const {
 	return getTrailerNode();
 }
 
-DNodeEx* STLList::linearSearch(STLList& ns, int key) {
 
-	for (DNodeEx* p = ns.beginPos(); p != ns.endPos(); p = p->next) {
-		if (p->getElement() == key) {
-			return p;
-		}
-	}
 
-	return NULL;
-}

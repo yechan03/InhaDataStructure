@@ -67,6 +67,15 @@
     <Filter Include="소스 파일\DataStructureSTLList\ImplementionClass">
       <UniqueIdentifier>{294edf52-bf55-423e-bfaa-9741a44da35f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\DataStructureSequence">
+      <UniqueIdentifier>{a548c731-0c48-48dd-8a34-e9974024b352}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureSequence\header">
+      <UniqueIdentifier>{72d0f928-f613-4097-be58-1b7657195017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DataStructureSequence\ImplementionClass">
+      <UniqueIdentifier>{101ddd4d-559a-4026-964b-dbb0e35c296a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameEntry.cpp">
@@ -114,6 +123,12 @@
     <ClCompile Include="STLListDriver.cpp">
       <Filter>소스 파일\DataStructureSTLList</Filter>
     </ClCompile>
+    <ClCompile Include="SequenceTestDriver.cpp">
+      <Filter>소스 파일\DataStructureSequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence.cpp">
+      <Filter>소스 파일\DataStructureSequence\ImplementionClass</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SNode.h">
@@ -142,6 +157,9 @@
     </ClInclude>
     <ClInclude Include="STLList.h">
       <Filter>소스 파일\DataStructureSTLList\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence.h">
+      <Filter>소스 파일\DataStructureSequence\header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
